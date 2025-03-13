@@ -1,24 +1,3 @@
-# Task Management API Project
-
-## Description
-
-This repository contains two projects:
-
-1. **Code Challenge**
-2. **Problem Resolution**
-
-Both projects are described in the PDF provided to me.
-
-## Project Structure
-
-Each project has its own `README.md` file, where specific instructions and explanations for each project are provided.
-
----
-
-Thank you for your consideration.
-
----
-
 ## QUIZ
 
 ### 1. You're building a high-throughput API for a cryptocurrency trading platform. For this platform, time is extremely important because microseconds count when processing high-volume trade orders. For communicating with the API, you want to choose the verb that is fastest for read-only operations.
