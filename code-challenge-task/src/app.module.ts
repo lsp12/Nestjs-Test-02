@@ -17,7 +17,7 @@ import { APP_GUARD } from '@nestjs/core';
       store: redisStore,
       host: process.env.REDIS_HOST || 'localhost',
       port: parseInt(process.env.REDIS_PORT || '6379'),
-      ttl: 60, // tiempo de vida en segundos
+      ttl: 500,
     }),
 
     ThrottlerModule.forRoot({
@@ -34,12 +34,11 @@ import { APP_GUARD } from '@nestjs/core';
       host: process.env.MYSQL_HOST || 'localhost',
       port: parseInt(process.env.MYSQL_PORT || '3307', 10),
       username: process.env.MYSQL_USER || 'root',
-      password: process.env.MYSQL_PASSWORD || 'password123',
+      password: process.env.MYSQL_PASSWORD || '*******',
       database: process.env.MYSQL_DATABASE || 'nestjs_jelou',
       autoLoadEntities: true,
-      synchronize: true, // En producción, se recomienda false
+      synchronize: true, // En producción, se poner esta opcion en false
     }),
-
     TasksModule,
   ],
   controllers: [],

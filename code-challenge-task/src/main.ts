@@ -32,7 +32,6 @@ async function bootstrap() {
       new winston.transports.MongoDB({
         level: 'error',
         db: process.env.MONGODB_URI || 'mongodb://localhost:27018/logs',
-        /* || 'mongodb://mongodb:27017/logs', */
         collection: 'log',
         options: { useUnifiedTopology: true },
       }),
@@ -51,8 +50,10 @@ async function bootstrap() {
   );
 
   const config = new DocumentBuilder()
-    .setTitle('Título de tu API')
-    .setDescription('Descripción detallada de tu API')
+    .setTitle('Task Management API')
+    .setDescription(
+      'API for managing tasks, including features like task creation, update, deletion, and status tracking.',
+    )
     .setVersion('1.0')
     .build();
 
